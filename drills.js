@@ -13,15 +13,23 @@ function yearOfBirth(age) {
 
 
 function whoAmI(name, age){
-    if(typeof name === 'undefined' || typeof name !== "string" && typeof age === 'undefined' || typeof age !== "number") {
+    if(typeof name === 'undefined' || typeof age === 'undefined') {
         console.error("Arguments not valid.");
     }
+    
 
-
+    if(typeof name !== "string" || typeof age !== "number") {
+        console.error("Arguments not valid.");
+    }
+    
     let yob = yearOfBirth(age);
     console.log(`Hi my name is ${name} and I'm ${age} years old.`);
     console.log(`I was born in ${yob}`);
 }
 
 
-whoAmI(1000 , 25);
+//works
+whoAmI("Alexa", 25);
+//whoAmI("Alexa" , "string");
+//whoAmI(25 , "string");
+//whoAmI(25 , 25);
