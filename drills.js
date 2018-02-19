@@ -13,7 +13,7 @@ function yearOfBirth(age) {
 
 
 function whoAmI(name, age){
-    if(name === undefined && age === undefined || typeof age !== "number") {
+    if(typeof name === 'undefined' || typeof name !== "string" && typeof age === 'undefined' || typeof age !== "number") {
         console.error("Arguments not valid.");
     }
 
@@ -24,4 +24,4 @@ function whoAmI(name, age){
 }
 
 
-whoAmI("Alexa", "string");
+whoAmI(1000 , 25);
